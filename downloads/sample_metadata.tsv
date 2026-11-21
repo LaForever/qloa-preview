@@ -1,0 +1,169 @@
+sample_id	matrix_column	omics_layer	tissue_code	tissue_name	biological_category	replicate	measurement	detection_rule	reference_gene_set	release
+RNA_ST_R1	ST_R1	transcriptome	ST	Shoot tip	vegetative	1	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_ST_R2	ST_R2	transcriptome	ST	Shoot tip	vegetative	2	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_ST_R3	ST_R3	transcriptome	ST	Shoot tip	vegetative	3	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_CT_R1	CT_R1	transcriptome	CT	Cotyledon	vegetative	1	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_CT_R2	CT_R2	transcriptome	CT	Cotyledon	vegetative	2	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_CT_R3	CT_R3	transcriptome	CT	Cotyledon	vegetative	3	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_HY_R1	HY_R1	transcriptome	HY	Hypocotyl	vegetative	1	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_HY_R2	HY_R2	transcriptome	HY	Hypocotyl	vegetative	2	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_HY_R3	HY_R3	transcriptome	HY	Hypocotyl	vegetative	3	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_RUZ_R1	RUZ_R1	transcriptome	RUZ	Root upper zone	root	1	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_RUZ_R2	RUZ_R2	transcriptome	RUZ	Root upper zone	root	2	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_RUZ_R3	RUZ_R3	transcriptome	RUZ	Root upper zone	root	3	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_RT_R1	RT_R1	transcriptome	RT	Root tip	root	1	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_RT_R2	RT_R2	transcriptome	RT	Root tip	root	2	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_RT_R3	RT_R3	transcriptome	RT	Root tip	root	3	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_s7_R1	s7_R1	transcriptome	s7	Seed stage 7	seed	1	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_s7_R2	s7_R2	transcriptome	s7	Seed stage 7	seed	2	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_s7_R3	s7_R3	transcriptome	s7	Seed stage 7	seed	3	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_PL_R1	PL_R1	transcriptome	PL	Peel	seed	1	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_PL_R2	PL_R2	transcriptome	PL	Peel	seed	2	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_PL_R3	PL_R3	transcriptome	PL	Peel	seed	3	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_EM_R1	EM_R1	transcriptome	EM	Embryo	seed	1	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_EM_R2	EM_R2	transcriptome	EM	Embryo	seed	2	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_EM_R3	EM_R3	transcriptome	EM	Embryo	seed	3	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_PS_R1	PS_R1	transcriptome	PS	Perisperm	seed	1	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_PS_R2	PS_R2	transcriptome	PS	Perisperm	seed	2	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_PS_R3	PS_R3	transcriptome	PS	Perisperm	seed	3	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_SDC_R1	SDC_R1	transcriptome	SDC	Seed coat	seed	1	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_SDC_R2	SDC_R2	transcriptome	SDC	Seed coat	seed	2	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_SDC_R3	SDC_R3	transcriptome	SDC	Seed coat	seed	3	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_SDIMB_R1	SDIMB_R1	transcriptome	SDIMB	Seed imbibed	seed	1	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_SDIMB_R2	SDIMB_R2	transcriptome	SDIMB	Seed imbibed	seed	2	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_SDIMB_R3	SDIMB_R3	transcriptome	SDIMB	Seed imbibed	seed	3	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_FR_R1	FR_R1	transcriptome	FR	Fruit	seed	1	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_FR_R2	FR_R2	transcriptome	FR	Fruit	seed	2	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_FR_R3	FR_R3	transcriptome	FR	Fruit	seed	3	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_s13_R1	s13_R1	transcriptome	s13	Seed stage 13	seed	1	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_s13_R2	s13_R2	transcriptome	s13	Seed stage 13	seed	2	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_s13_R3	s13_R3	transcriptome	s13	Seed stage 13	seed	3	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_FL_R1	FL_R1	transcriptome	FL	Flower	floral	1	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_FL_R2	FL_R2	transcriptome	FL	Flower	floral	2	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_FL_R3	FL_R3	transcriptome	FL	Flower	floral	3	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_FLPD_R1	FLPD_R1	transcriptome	FLPD	Flower pedicel	floral	1	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_FLPD_R2	FLPD_R2	transcriptome	FLPD	Flower pedicel	floral	2	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_FLPD_R3	FLPD_R3	transcriptome	FLPD	Flower pedicel	floral	3	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_P_R1	P_R1	transcriptome	P	Pollen	floral	1	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_P_R2	P_R2	transcriptome	P	Pollen	floral	2	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_P_R3	P_R3	transcriptome	P	Pollen	floral	3	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_SP_R1	SP_R1	transcriptome	SP	Sepal	floral	1	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_SP_R2	SP_R2	transcriptome	SP	Sepal	floral	2	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_SP_R3	SP_R3	transcriptome	SP	Sepal	floral	3	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_FM_R1	FM_R1	transcriptome	FM	Filament	floral	1	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_FM_R2	FM_R2	transcriptome	FM	Filament	floral	2	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_FM_R3	FM_R3	transcriptome	FM	Filament	floral	3	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_OV_R1	OV_R1	transcriptome	OV	Ovule	floral	1	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_OV_R2	OV_R2	transcriptome	OV	Ovule	floral	2	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_OV_R3	OV_R3	transcriptome	OV	Ovule	floral	3	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_CP_R1	CP_R1	transcriptome	CP	Carpel	floral	1	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_CP_R2	CP_R2	transcriptome	CP	Carpel	floral	2	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_CP_R3	CP_R3	transcriptome	CP	Carpel	floral	3	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_ND_R1	ND_R1	transcriptome	ND	Node	vegetative	1	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_ND_R2	ND_R2	transcriptome	ND	Node	vegetative	2	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_ND_R3	ND_R3	transcriptome	ND	Node	vegetative	3	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_IND_R1	IND_R1	transcriptome	IND	Internode	vegetative	1	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_IND_R2	IND_R2	transcriptome	IND	Internode	vegetative	2	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_IND_R3	IND_R3	transcriptome	IND	Internode	vegetative	3	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_SCLF_R1	SCLF_R1	transcriptome	SCLF	Senescent leaf	vegetative	1	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_SCLF_R2	SCLF_R2	transcriptome	SCLF	Senescent leaf	vegetative	2	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_SCLF_R3	SCLF_R3	transcriptome	SCLF	Senescent leaf	vegetative	3	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_FLF_R1	FLF_R1	transcriptome	FLF	Flag leaf	vegetative	1	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_FLF_R2	FLF_R2	transcriptome	FLF	Flag leaf	vegetative	2	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_FLF_R3	FLF_R3	transcriptome	FLF	Flag leaf	vegetative	3	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_CLLF_R1	CLLF_R1	transcriptome	CLLF	Cauline leaf	vegetative	1	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_CLLF_R2	CLLF_R2	transcriptome	CLLF	Cauline leaf	vegetative	2	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_CLLF_R3	CLLF_R3	transcriptome	CLLF	Cauline leaf	vegetative	3	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_LFPT_R1	LFPT_R1	transcriptome	LFPT	Leaf petiole	vegetative	1	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_LFPT_R2	LFPT_R2	transcriptome	LFPT	Leaf petiole	vegetative	2	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_LFPT_R3	LFPT_R3	transcriptome	LFPT	Leaf petiole	vegetative	3	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_EBC_R1	EBC_R1	transcriptome	EBC	Epidermal bladder cell	special	1	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_EBC_R2	EBC_R2	transcriptome	EBC	Epidermal bladder cell	special	2	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_EBC_R3	EBC_R3	transcriptome	EBC	Epidermal bladder cell	special	3	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_R_R1	R_R1	transcriptome	R	Root	root	1	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_R_R2	R_R2	transcriptome	R	Root	root	2	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+RNA_R_R3	R_R3	transcriptome	R	Root	root	3	TPM	TPM > 1 in at least two biological replicates within a tissue	Cq_V4 longest isoforms	1.0
+PROT_ST_R1	ST_R1	proteome	ST	Shoot tip	vegetative	1	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_ST_R2	ST_R2	proteome	ST	Shoot tip	vegetative	2	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_ST_R3	ST_R3	proteome	ST	Shoot tip	vegetative	3	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_CT_R1	CT_R1	proteome	CT	Cotyledon	vegetative	1	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_CT_R2	CT_R2	proteome	CT	Cotyledon	vegetative	2	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_CT_R3	CT_R3	proteome	CT	Cotyledon	vegetative	3	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_HY_R1	HY_R1	proteome	HY	Hypocotyl	vegetative	1	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_HY_R2	HY_R2	proteome	HY	Hypocotyl	vegetative	2	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_HY_R3	HY_R3	proteome	HY	Hypocotyl	vegetative	3	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_RUZ_R1	RUZ_R1	proteome	RUZ	Root upper zone	root	1	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_RUZ_R2	RUZ_R2	proteome	RUZ	Root upper zone	root	2	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_RUZ_R3	RUZ_R3	proteome	RUZ	Root upper zone	root	3	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_RT_R1	RT_R1	proteome	RT	Root tip	root	1	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_RT_R2	RT_R2	proteome	RT	Root tip	root	2	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_RT_R3	RT_R3	proteome	RT	Root tip	root	3	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_s7_R1	s7_R1	proteome	s7	Seed stage 7	seed	1	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_s7_R2	s7_R2	proteome	s7	Seed stage 7	seed	2	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_s7_R3	s7_R3	proteome	s7	Seed stage 7	seed	3	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_PL_R1	PL_R1	proteome	PL	Peel	seed	1	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_PL_R2	PL_R2	proteome	PL	Peel	seed	2	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_PL_R3	PL_R3	proteome	PL	Peel	seed	3	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_EM_R1	EM_R1	proteome	EM	Embryo	seed	1	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_EM_R2	EM_R2	proteome	EM	Embryo	seed	2	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_EM_R3	EM_R3	proteome	EM	Embryo	seed	3	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_PS_R1	PS_R1	proteome	PS	Perisperm	seed	1	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_PS_R2	PS_R2	proteome	PS	Perisperm	seed	2	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_PS_R3	PS_R3	proteome	PS	Perisperm	seed	3	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_SDC_R1	SDC_R1	proteome	SDC	Seed coat	seed	1	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_SDC_R2	SDC_R2	proteome	SDC	Seed coat	seed	2	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_SDC_R3	SDC_R3	proteome	SDC	Seed coat	seed	3	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_SDIMB_R1	SDIMB_R1	proteome	SDIMB	Seed imbibed	seed	1	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_SDIMB_R2	SDIMB_R2	proteome	SDIMB	Seed imbibed	seed	2	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_SDIMB_R3	SDIMB_R3	proteome	SDIMB	Seed imbibed	seed	3	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_FR_R1	FR_R1	proteome	FR	Fruit	seed	1	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_FR_R2	FR_R2	proteome	FR	Fruit	seed	2	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_FR_R3	FR_R3	proteome	FR	Fruit	seed	3	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_s13_R1	s13_R1	proteome	s13	Seed stage 13	seed	1	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_s13_R2	s13_R2	proteome	s13	Seed stage 13	seed	2	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_s13_R3	s13_R3	proteome	s13	Seed stage 13	seed	3	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_FL_R1	FL_R1	proteome	FL	Flower	floral	1	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_FL_R2	FL_R2	proteome	FL	Flower	floral	2	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_FL_R3	FL_R3	proteome	FL	Flower	floral	3	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_FLPD_R1	FLPD_R1	proteome	FLPD	Flower pedicel	floral	1	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_FLPD_R2	FLPD_R2	proteome	FLPD	Flower pedicel	floral	2	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_FLPD_R3	FLPD_R3	proteome	FLPD	Flower pedicel	floral	3	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_P_R1	P_R1	proteome	P	Pollen	floral	1	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_P_R2	P_R2	proteome	P	Pollen	floral	2	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_P_R3	P_R3	proteome	P	Pollen	floral	3	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_SP_R1	SP_R1	proteome	SP	Sepal	floral	1	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_SP_R2	SP_R2	proteome	SP	Sepal	floral	2	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_SP_R3	SP_R3	proteome	SP	Sepal	floral	3	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_FM_R1	FM_R1	proteome	FM	Filament	floral	1	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_FM_R2	FM_R2	proteome	FM	Filament	floral	2	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_FM_R3	FM_R3	proteome	FM	Filament	floral	3	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_OV_R1	OV_R1	proteome	OV	Ovule	floral	1	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_OV_R2	OV_R2	proteome	OV	Ovule	floral	2	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_OV_R3	OV_R3	proteome	OV	Ovule	floral	3	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_CP_R1	CP_R1	proteome	CP	Carpel	floral	1	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_CP_R2	CP_R2	proteome	CP	Carpel	floral	2	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_CP_R3	CP_R3	proteome	CP	Carpel	floral	3	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_ND_R1	ND_R1	proteome	ND	Node	vegetative	1	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_ND_R2	ND_R2	proteome	ND	Node	vegetative	2	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_ND_R3	ND_R3	proteome	ND	Node	vegetative	3	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_IND_R1	IND_R1	proteome	IND	Internode	vegetative	1	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_IND_R2	IND_R2	proteome	IND	Internode	vegetative	2	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_IND_R3	IND_R3	proteome	IND	Internode	vegetative	3	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_SCLF_R1	SCLF_R1	proteome	SCLF	Senescent leaf	vegetative	1	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_SCLF_R2	SCLF_R2	proteome	SCLF	Senescent leaf	vegetative	2	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_SCLF_R3	SCLF_R3	proteome	SCLF	Senescent leaf	vegetative	3	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_FLF_R1	FLF_R1	proteome	FLF	Flag leaf	vegetative	1	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_FLF_R2	FLF_R2	proteome	FLF	Flag leaf	vegetative	2	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_FLF_R3	FLF_R3	proteome	FLF	Flag leaf	vegetative	3	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_CLLF_R1	CLLF_R1	proteome	CLLF	Cauline leaf	vegetative	1	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_CLLF_R2	CLLF_R2	proteome	CLLF	Cauline leaf	vegetative	2	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_CLLF_R3	CLLF_R3	proteome	CLLF	Cauline leaf	vegetative	3	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_LFPT_R1	LFPT_R1	proteome	LFPT	Leaf petiole	vegetative	1	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_LFPT_R2	LFPT_R2	proteome	LFPT	Leaf petiole	vegetative	2	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_LFPT_R3	LFPT_R3	proteome	LFPT	Leaf petiole	vegetative	3	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_EBC_R1	EBC_R1	proteome	EBC	Epidermal bladder cell	special	1	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_EBC_R2	EBC_R2	proteome	EBC	Epidermal bladder cell	special	2	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_EBC_R3	EBC_R3	proteome	EBC	Epidermal bladder cell	special	3	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_R_R1	R_R1	proteome	R	Root	root	1	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_R_R2	R_R2	proteome	R	Root	root	2	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0
+PROT_R_R3	R_R3	proteome	R	Root	root	3	Study protein abundance matrix	Positive finite abundance in at least one biological replicate	Cq_V4 longest isoforms	1.0

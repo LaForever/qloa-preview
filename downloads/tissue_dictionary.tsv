@@ -1,0 +1,29 @@
+code	full_name	category
+ST	Shoot tip	vegetative
+CT	Cotyledon	vegetative
+HY	Hypocotyl	vegetative
+RUZ	Root upper zone	root
+RT	Root tip	root
+s7	Seed stage 7	seed
+PL	Peel	seed
+EM	Embryo	seed
+PS	Perisperm	seed
+SDC	Seed coat	seed
+SDIMB	Seed imbibed	seed
+FR	Fruit	seed
+s13	Seed stage 13	seed
+FL	Flower	floral
+FLPD	Flower pedicel	floral
+P	Pollen	floral
+SP	Sepal	floral
+FM	Filament	floral
+OV	Ovule	floral
+CP	Carpel	floral
+ND	Node	vegetative
+IND	Internode	vegetative
+SCLF	Senescent leaf	vegetative
+FLF	Flag leaf	vegetative
+CLLF	Cauline leaf	vegetative
+LFPT	Leaf petiole	vegetative
+EBC	Epidermal bladder cell	specialized cell
+R	Root	root

@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Quinoa Life-cycle Omics Atlas: a 28-tissue transcriptome and proteome resource for Chenopodium quinoa.">
+  <meta name="author" content="Heng Huang, Shanghai Jiao Tong University">
+  <meta name="keywords" content="Chenopodium quinoa, quinoa, transcriptome, proteome, tissue atlas, plant omics, CF-MS, subgenome">
+  <meta name="citation_title" content="Quinoa Life-cycle Omics Atlas">
+  <meta name="citation_author" content="Heng Huang">
+  <meta name="citation_author" content="Juang Huang">
+  <meta name="citation_author" content="Qingbing Wu">
+  <meta name="citation_author" content="Binjie Ge">
+  <meta name="citation_author" content="Heng Zhang">
+  <meta name="citation_technical_report_institution" content="Shanghai Jiao Tong University">
+  <meta name="theme-color" content="#173a29">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Quinoa Life-cycle Omics Atlas">
+  <meta property="og:description" content="Tissue-resolved transcriptome and proteome data across 28 Chenopodium quinoa tissues.">
+  <meta property="og:image" content="./assets/quinoa-whole-plant.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Quinoa Life-cycle Omics Atlas">
+  <meta name="twitter:description" content="A 28-tissue transcriptome and proteome resource for Chenopodium quinoa.">
+  <title>Quinoa Life-cycle Omics Atlas | Transcriptome and Proteome Resource</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css?v=go-network-preset-1">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["Dataset", "DataCatalog"],
+    "name": "Quinoa Life-cycle Omics Atlas",
+    "alternateName": "QLOA",
+    "description": "Tissue-resolved transcript and protein abundance across 28 Chenopodium quinoa tissues spanning six developmental stages.",
+    "version": "1.0",
+    "dateModified": "2026-06-11",
+    "creativeWorkStatus": "Pre-release",
+    "isAccessibleForFree": true,
+    "inLanguage": "en",
+    "keywords": ["Chenopodium quinoa", "transcriptome", "proteome", "tissue atlas", "plant omics", "CF-MS", "subgenome"],
+    "measurementTechnique": ["RNA sequencing", "mass spectrometry-based proteomics", "co-fractionation mass spectrometry"],
+    "about": { "@type": "Taxon", "name": "Chenopodium quinoa" },
+    "creator": {
+      "@type": "Organization",
+      "name": "School of Life Sciences and Biotechnology, Shanghai Jiao Tong University"
+    },
+    "author": [
+      { "@type": "Person", "name": "Heng Huang" },
+      { "@type": "Person", "name": "Juang Huang" },
+      { "@type": "Person", "name": "Qingbing Wu" },
+      { "@type": "Person", "name": "Binjie Ge" },
+      { "@type": "Person", "name": "Heng Zhang" }
+    ]
+  }
+  </script>
+  <style>.pages-preview-notice{margin:.7rem auto;padding:.65rem 1rem;width:min(calc(100% - 2rem),1280px);color:#244337;background:#edf4ee;border:1px solid #d2e0d5;border-radius:6px;font-size:.92rem}.pages-preview-plot{display:block;width:min(100%,680px);height:auto;margin:1rem auto}</style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="release-bar">
+    <span>Quinoa Life-cycle Omics Atlas</span>
+    <span data-release-label data-release-suffix=" · 28 tissues · 6 stages · Transcriptome + Proteome · Cq_V4">Release candidate 1.0 · 28 tissues · 6 stages · Transcriptome + Proteome · Cq_V4</span>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Quinoa Life-cycle Omics Atlas home">
+      <span class="brand-mark">Q</span>
+      <span>
+        <strong>Quinoa Life-cycle Omics Atlas</strong>
+        <small>Chenopodium quinoa transcriptome and proteome resource</small>
+      </span>
+    </a>
+    <nav class="topnav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#detail">Life-cycle Atlas</a>
+      <a href="#browse">Gene Search</a>
+      <a href="#tissues">Tissue Browser</a>
+      <a href="#analysis">Data Resources</a>
+      <a href="#tools">Tools</a>
+      <a href="#downloads">Downloads</a>
+      <a href="#about">Help</a>
+    </nav>
+  </header>
+  <p class="pages-preview-notice" role="status">Static preview. Explore tissue summaries and example gene records. Live analysis tools require the database server.</p>
+
+  <main id="main-content">
+    <section id="home" class="hero home-hero route-page active-page">
+      <div class="hero-copy">
+        <p class="eyebrow"><i>Chenopodium quinoa</i> · Cq_V4 reference</p>
+        <h1>Quinoa Life-cycle Omics Atlas</h1>
+        <p class="hero-text">
+          Tissue-resolved transcript and protein abundance across 28 quinoa tissues spanning six developmental stages. Search and analysis are available without registration.
+        </p>
+
+        <form id="hero-search-form" class="hero-search" role="search">
+          <label class="sr-only" for="hero-search-input">Search genes and annotations</label>
+          <input id="hero-search-input" type="search" autocomplete="off"
+                 placeholder="Search Gene ID, Arabidopsis homolog or functional term">
+          <button type="submit">Search</button>
+        </form>
+        <p class="search-example">Examples: <code>Cqu1AG202550</code>, <code>AT2G44710</code>, RNA-binding protein</p>
+        <div id="hero-suggestions" class="suggestion-list"></div>
+
+        <div class="hero-actions">
+          <a class="pill-button" href="#browse">Gene search</a>
+          <a class="text-link" href="#tissues">Browse tissues <span aria-hidden="true">→</span></a>
+        </div>
+        <div id="hero-stats" class="stat-grid"></div>
+      </div>
+
+      <div class="hero-visual">
+        <img src="./assets/quinoa-whole-plant.jpg" alt="Whole Chenopodium quinoa plant with roots">
+        <div class="visual-caption">
+          <span>Species</span>
+          <strong><i>Chenopodium quinoa</i> Willd.</strong>
+          <small>Transcriptome and proteome atlas</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-lifecycle-section home-only active-page">
+      <div class="home-section-head">
+        <div>
+          <p class="eyebrow">Life-cycle navigation</p>
+          <h2>Explore the quinoa life cycle</h2>
+          <p>Twenty-eight tissues with matched transcriptome and proteome layers, organized by developmental context and organ system.</p>
+        </div>
+        <a class="text-link" href="#tissues">Full tissue browser <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="home-lifecycle-layout">
+        <figure class="home-plant-figure">
+          <img src="./assets/lifecycle/whole-plant.webp" alt="Botanical illustration of a whole quinoa plant">
+          <figcaption><span>Reference illustration</span><strong><i>Chenopodium quinoa</i></strong><small>28 tissues</small></figcaption>
+        </figure>
+        <div>
+          <div id="home-lifecycle-groups" class="home-organ-grid"></div>
+          <button class="home-ebc-card" type="button" data-home-life-group="EBC">
+            <span class="home-ebc-symbol" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span><strong>Epidermal bladder cell</strong><small>Specialized cell type</small></span>
+            <b>1</b>
+          </button>
+        </div>
+      </div>
+      <div id="home-lifecycle-detail" class="home-lifecycle-detail"></div>
+    </section>
+
+    <section class="home-resource-index home-only active-page">
+      <div class="home-section-head">
+        <div>
+          <p class="eyebrow">Resource portals</p>
+          <h2>Browse the atlas</h2>
+        </div>
+        <a class="text-link" href="#about">Help <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="database-portal-grid">
+        <a class="database-portal" href="#detail">
+          <span>Atlas</span>
+          <strong>Life-cycle Atlas</strong>
+          <small>Matched RNA and protein profiles across 28 tissues.</small>
+          <div class="home-portal-mini home-portal-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        </a>
+        <a class="database-portal" href="#browse">
+          <span>Genes</span>
+          <strong>Gene Search</strong>
+          <small>Identifiers, homologs, annotation and abundance profiles.</small>
+          <div class="home-portal-mini home-pair-mini" aria-hidden="true"><b>A</b><span>homoeolog pair</span><b>B</b></div>
+        </a>
+        <a class="database-portal" href="#tissues">
+          <span>Tissues</span>
+          <strong>Tissue Browser</strong>
+          <small>Detected features, abundant genes and RNA-protein concordance.</small>
+          <div class="home-portal-mini home-tissue-mini" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        </a>
+        <a class="database-portal" href="#analysis/tissue-specific-proteins">
+          <span>Protein programs</span>
+          <strong>Tissue-specific Proteins</strong>
+          <small>Marker proteins, enhanced classes and enriched GO terms.</small>
+          <div class="home-portal-mini home-portal-bars protein-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        </a>
+        <a class="database-portal" href="#analysis/cross-species-conservation">
+          <span>Comparative omics</span>
+          <strong>Cross-species Conservation</strong>
+          <small>Orthogroup conservation and tissue-pattern clusters.</small>
+          <div class="home-portal-mini home-cross-mini" aria-hidden="true"><i></i><i></i><i></i></div>
+        </a>
+        <a class="database-portal" href="#analysis/ab-subgenome-explorer">
+          <span>Subgenomes</span>
+          <strong>A/B Subgenome Bias</strong>
+          <small>RNA- and protein-level homoeolog abundance across tissues.</small>
+          <div class="home-portal-mini home-pair-mini" aria-hidden="true"><b>A</b><span>RNA ↔ protein</span><b>B</b></div>
+        </a>
+        <a class="database-portal" href="#analysis/cfms-protein-associations">
+          <span>Protein associations</span>
+          <strong>CF-MS Associations</strong>
+          <small>Elution profiles, association communities and A/B replaceability.</small>
+          <div class="home-portal-mini home-complex-mini" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        </a>
+        <a class="database-portal" href="#tools">
+          <span>Utilities</span>
+          <strong>Tools</strong>
+          <small>Expression heatmap, GO enrichment, sequence retrieval and BLAST.</small>
+          <div class="home-portal-mini home-tools-mini" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        </a>
+      </div>
+    </section>
+
+    <section class="home-data-overview home-only active-page">
+      <div class="home-section-head">
+        <div>
+          <p class="eyebrow">Database contents</p>
+          <h2>Data overview</h2>
+        </div>
+        <a class="text-link" href="#downloads">Downloads <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="home-data-grid">
+        <article class="home-data-panel">
+          <div class="home-panel-heading">
+            <span>Omics coverage</span>
+            <strong>Gene records by evidence layer</strong>
+          </div>
+          <div id="home-feature-counts" class="home-feature-counts"></div>
+        </article>
+        <article class="home-data-panel">
+          <div class="home-panel-heading">
+            <span>Tissue coverage</span>
+            <strong>Samples by biological context</strong>
+          </div>
+          <div id="home-category-chart" class="category-chart"></div>
+          <svg class="home-context-wave" viewBox="0 0 500 80" aria-hidden="true">
+            <path d="M15 54 C62 46 83 22 125 29 S193 66 237 42 S302 13 353 34 S431 63 485 24"></path>
+            <path d="M15 60 C58 56 88 43 125 46 S192 70 238 55 S304 31 354 47 S434 69 485 39"></path>
+          </svg>
+        </article>
+        <article class="home-data-panel home-release-panel">
+          <div class="home-panel-heading">
+            <span>Current release</span>
+            <strong data-release-label data-release-suffix=" · Cq_V4">Release candidate 1.0 · Cq_V4</strong>
+          </div>
+          <dl class="release-metadata">
+            <div><dt>Omics layers</dt><dd>Transcriptome, proteome</dd></div>
+            <div><dt>Reference</dt><dd>Cq_V4 longest isoforms</dd></div>
+            <div><dt>GO background</dt><dd>All annotated genes</dd></div>
+            <div><dt>Samples</dt><dd>28 tissues</dd></div>
+            <div><dt>Developmental stages</dt><dd>6</dd></div>
+            <div><dt>Proteomics</dt><dd>DIA-MS</dd></div>
+          </dl>
+          <details class="source-disclosure">
+            <summary>Dataset scope and evidence</summary>
+            <div id="dataset-release-list" class="source-list"></div>
+          </details>
+        </article>
+      </div>
+    </section>
+
+    <section class="home-featured-section home-only active-page">
+      <div class="home-section-head">
+        <div>
+          <p class="eyebrow">Featured resources</p>
+          <h2>Biological resource collections</h2>
+          <p>Compact entry points to the biological resources represented in the atlas.</p>
+        </div>
+        <a class="text-link" href="#analysis">All data resources <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="home-featured-grid">
+        <a class="home-feature-card" href="#analysis/tissue-specific-proteins">
+          <span>Tissue programs</span><strong>Tissue-specific protein programs</strong>
+          <p>Specialized protein abundance programs distinguish reproductive, seed, root and EBC tissues.</p>
+          <div class="home-mini-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <small id="home-marker-total" class="home-feature-link">Open resource →</small>
+        </a>
+        <a class="home-feature-card" href="#analysis/cross-species-conservation">
+          <span>Cross-species</span><strong>Conserved and shifted orthogroups</strong>
+          <p>Protein conservation and lineage-dependent tissue-pattern clusters.</p>
+          <div class="home-cluster-dots" aria-hidden="true"><i id="home-conserved-count">571</i><i id="home-divergent-count">388</i><i id="home-shifted-count">464</i></div>
+          <small class="home-feature-link">Open resource →</small>
+        </a>
+        <a class="home-feature-card" href="#analysis/ab-subgenome-explorer">
+          <span>Subgenome regulation</span><strong>Protein-level A/B divergence</strong>
+          <p>Homoeolog abundance bias across matched tissues and omics layers.</p>
+          <div class="home-feature-graphic" aria-hidden="true"><svg viewBox="0 0 260 80"><path d="M15 62 C54 17 91 22 123 62"></path><path d="M119 62 C153 2 209 3 245 62"></path><line x1="130" y1="9" x2="130" y2="66"></line></svg></div>
+          <small class="home-feature-link">Explore resource →</small>
+        </a>
+        <a class="home-feature-card" href="#analysis/cfms-protein-associations">
+          <span>CF-MS associations</span><strong>Protein association and homoeolog replaceability</strong>
+          <p>Elution profiles, association communities and A/B homoeolog replacement patterns.</p>
+          <div class="home-feature-graphic home-network-graphic" aria-hidden="true"><svg viewBox="0 0 260 80"><g><line x1="40" y1="40" x2="96" y2="20"></line><line x1="40" y1="40" x2="96" y2="59"></line><line x1="96" y1="20" x2="154" y2="38"></line><line x1="96" y1="59" x2="154" y2="38"></line><line x1="154" y1="38" x2="220" y2="22"></line><line x1="154" y1="38" x2="220" y2="59"></line></g><circle cx="40" cy="40" r="12"></circle><circle cx="96" cy="20" r="12"></circle><circle cx="96" cy="59" r="12"></circle><circle cx="154" cy="38" r="12"></circle><circle cx="220" cy="22" r="12"></circle><circle cx="220" cy="59" r="12"></circle></svg></div>
+          <small class="home-feature-link">Open resource →</small>
+        </a>
+      </div>
+    </section>
+
+    <section class="home-query-section home-only active-page">
+      <div class="home-section-head">
+        <div><p class="eyebrow">Quick starts</p><h2>Example queries</h2></div>
+        <a class="text-link" href="#browse">Advanced search <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="home-query-grid">
+        <article><strong>Genes and orthogroups</strong><div class="home-query-chips">
+          <button type="button" data-home-gene="Cqu1AG202550">Cqu1AG202550</button>
+          <button type="button" data-home-gene="Cqu1BG037160">Cqu1BG037160</button>
+          <button type="button" data-home-og="OG0001012">OG0001012</button>
+          <button type="button" data-home-search="AT4G25080 CHLM">AT4G25080 · CHLM</button>
+          <button type="button" data-home-search="MADS-box proteins">MADS-box proteins</button>
+          <button type="button" data-home-search="RNA-binding protein">RNA-binding protein</button>
+        </div></article>
+        <article><strong>Tissues and biological themes</strong><div class="home-query-chips">
+          <a href="#analysis/tissue-specific-proteins" data-home-marker-tissue="EBC">EBC-specific proteins</a>
+          <button type="button" data-home-search="pollen tube growth">Pollen tube growth</button>
+          <button type="button" data-home-search="seed storage protein">Seed storage proteins</button>
+          <a href="#analysis/cross-species-conservation">Conserved leaf orthogroups</a>
+          <a href="#analysis/ab-subgenome-explorer">A/B protein bias</a>
+          <a href="#analysis/cfms-protein-associations">CF-MS protein associations</a>
+        </div></article>
+      </div>
+    </section>
+
+    <section id="detail" class="section-block route-page">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Life-cycle atlas</p>
+          <h2>Gene annotation and tissue profiles</h2>
+          <p class="section-caption">Homology-based annotation and matched transcript/protein abundance profiles across all 28 tissues.</p>
+        </div>
+        <div class="mode-switcher" aria-label="Expression scale">
+          <button id="mode-log2" class="mode-button active" type="button">log2(mean + 1)</button>
+          <button id="mode-zscore" class="mode-button" type="button">Within-gene z-score</button>
+        </div>
+      </div>
+
+      <div class="detail-grid">
+        <aside class="entry-column">
+          <div id="entry-meta" class="entry-meta"></div>
+          <div id="entry-annotation" class="annotation-stack"></div>
+        </aside>
+        <div class="atlas-column">
+          <div class="atlas-grid">
+            <article id="transcript-panel" class="atlas-card"></article>
+            <article id="protein-panel" class="atlas-card"></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="browse" class="section-block route-page">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Gene search</p>
+          <h2>Browse gene records</h2>
+          <p class="section-caption">Filter records by omics coverage, peak-expression tissue or derived statistic.</p>
+        </div>
+      </div>
+
+      <div class="filter-grid">
+        <label>
+          <span>Keyword</span>
+          <input id="browse-query" type="search" placeholder="Gene ID, homolog or description">
+        </label>
+        <label>
+          <span>Data availability</span>
+          <select id="browse-omics">
+            <option value="all">All records</option>
+            <option value="shared">Transcript + protein</option>
+            <option value="proteome">Protein evidence</option>
+            <option value="transcriptome">Transcript evidence</option>
+          </select>
+        </label>
+        <label>
+          <span>Peak tissue</span>
+          <select id="browse-tissue">
+            <option value="">All tissues</option>
+          </select>
+        </label>
+        <label>
+          <span>Sort by</span>
+          <select id="browse-sort">
+            <option value="gene_id">Gene ID</option>
+            <option value="r_max">Transcript abundance</option>
+            <option value="p_max">Protein abundance</option>
+            <option value="r_tau">Transcript specificity</option>
+            <option value="p_tau">Protein specificity</option>
+            <option value="corr">RNA-protein correlation</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="browse-meta">
+        <p id="browse-status"></p>
+        <div class="pager-controls">
+          <button id="browse-prev" type="button">Previous</button>
+          <span id="browse-page"></span>
+          <button id="browse-next" type="button">Next</button>
+        </div>
+      </div>
+      <div id="entry-grid" class="entry-grid"></div>
+    </section>
+
+    <section id="tissues" class="section-block route-page">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Tissue browser</p>
+          <h2>Explore individual tissues</h2>
+          <p class="section-caption">Browse RNA- and protein-detected genes, tissue-level concordance and highly abundant features. RNA requires TPM &gt; 1 in at least two replicates; protein requires positive abundance in at least one replicate.</p>
+        </div>
+      </div>
+      <div class="tissue-layout">
+        <div id="tissue-grid" class="tissue-grid"></div>
+        <div id="tissue-detail" class="tissue-detail"></div>
+      </div>
+    </section>
+
+    <section id="analysis" class="section-block analysis-section fig2-resource route-page">
+      <div class="resource-pagebar fig2-head">
+        <div class="resource-breadcrumb">
+          <a href="#analysis">Data Resources</a>
+          <span aria-hidden="true">›</span>
+          <strong id="resource-breadcrumb-current">Tissue-specific Protein Programs</strong>
+        </div>
+        <div class="resource-module-control">
+          <label>
+            <span>Resource collection</span>
+            <select id="resource-module-select">
+              <option value="fig2">Tissue-specific protein programs</option>
+              <option value="fig3">Cross-species conservation</option>
+              <option value="fig4">A/B subgenome explorer</option>
+              <option value="fig5">CF-MS protein associations</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="resource-workspace fig2-explorer active" data-resource-module="fig2">
+        <div class="fig2-resource-hero">
+          <div class="titlewrap">
+            <div class="leafbadge protein-program-mark" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <div>
+              <p class="eyebrow">Tissue proteomics resource</p>
+              <h2>Tissue-specific protein programs</h2>
+              <p>Explore marker proteins, matched transcript support, tissue-enhanced protein classes and enriched GO functions across 28 quinoa tissues.</p>
+              <span class="resource-provenance">Gene-level resource · 28 tissues</span>
+            </div>
+          </div>
+          <a class="resource-help-link" href="#about">About this resource</a>
+        </div>
+
+        <div id="fig2-summary-cards" class="fig2-summary-cards"></div>
+
+        <div class="fig2-tabs" role="tablist" aria-label="Tissue-specific protein resource views">
+          <button class="active" type="button" data-fig2-tab="markers">Marker proteins</button>
+          <button type="button" data-fig2-tab="enhanced">Enhanced proteins</button>
+        </div>
+
+        <div class="fig2-panels">
+        <section class="fig2-panel active" data-fig2-panel="markers">
+          <div class="fig2-panel-head">
+            <div>
+              <p class="eyebrow">Marker proteins</p>
+              <h3>Tissue-enriched marker proteins with transcript evidence</h3>
+            </div>
+            <div class="module-controls">
+              <label><span>Gene or symbol</span><input id="marker-query" type="search" placeholder="Cqu... or FLC"></label>
+              <button id="marker-query-run" class="control-button" type="button">Search</button>
+              <label><span>Tissue</span><select id="marker-tissue"><option value="">All tissues</option></select></label>
+              <label>
+                <span>RNA support</span>
+                <select id="marker-support">
+                  <option value="all">All evidence</option>
+                  <option value="yes">Same-tissue supported</option>
+                  <option value="no">Protein-only candidates</option>
+                </select>
+              </label>
+              <label><span>Min protein FC</span><input id="marker-min-fc" type="number" min="0" step="0.5" value="0"></label>
+            </div>
+          </div>
+          <div class="fig2-heatmap-stack">
+            <div id="marker-protein-heatmap" class="fig2-chart gene-heatmap-card"></div>
+            <div id="marker-rna-heatmap" class="fig2-chart gene-heatmap-card"></div>
+          </div>
+          <div class="marker-overview-grid">
+            <div id="marker-count-chart" class="fig2-chart"></div>
+            <div class="fig2-chart">
+              <div class="chart-title">RNA support summary</div>
+              <div id="marker-support-chart" class="support-chart"></div>
+            </div>
+            <div id="marker-focus-panel" class="marker-focus-panel"></div>
+          </div>
+          <div id="marker-table" class="tool-results"></div>
+        </section>
+
+        <section class="fig2-panel" data-fig2-panel="enhanced">
+          <div class="fig2-panel-head">
+            <div>
+              <p class="eyebrow">Enhanced proteins</p>
+              <h3>Tissue-enhanced protein classes and enriched GO functions</h3>
+            </div>
+            <div class="module-controls">
+              <label><span>Class</span><select id="enhanced-class-select"></select></label>
+              <label>
+                <span>Genes per tissue</span>
+                <select id="enhanced-row-limit">
+                  <option value="30" selected>30</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                  <option value="200">200</option>
+                  <option value="300">300</option>
+                </select>
+              </label>
+            </div>
+          </div>
+          <div class="fig2-enhanced-layout">
+            <aside id="enhanced-class-summary" class="fig2-side-panel"></aside>
+            <div id="enhanced-heatmap" class="fig2-chart enhanced-heatmap"></div>
+          </div>
+          <div class="fig2-panel-head compact-go-head">
+            <div>
+              <p class="eyebrow">Enhanced GO network</p>
+              <h3>GO function nodes linked by shared enriched genes</h3>
+            </div>
+            <div class="module-controls">
+              <label><span>Class</span><select id="go-class-select"><option value="">All classes</option></select></label>
+              <label>
+                <span>Node type</span>
+                <select id="go-node-type">
+                  <option value="all">Connected GO terms</option>
+                  <option value="class-specific">Class-specific</option>
+                  <option value="shared">Shared</option>
+                </select>
+              </label>
+              <label>
+                <span>Isolated terms</span>
+                <select id="go-include-isolates">
+                  <option value="0">Hide by default</option>
+                  <option value="1">Show all</option>
+                </select>
+              </label>
+              <label><span>Search GO</span><input id="go-network-query" type="search" placeholder="GO ID or function"></label>
+              <label><span>Min genes</span><input id="go-min-genes" type="number" min="0" step="5" value="0"></label>
+            </div>
+          </div>
+          <div class="go-network-layout">
+            <div class="go-network-stage">
+              <div id="go-network" class="go-network" role="region" aria-label="Interactive enhanced-protein GO term network"></div>
+              <div id="go-network-tooltip" class="go-network-tooltip" role="tooltip" hidden></div>
+              <div id="go-network-legend" class="go-network-legend"></div>
+            </div>
+            <aside id="go-term-detail" class="fig2-side-panel"></aside>
+          </div>
+        </section>
+        </div>
+      </div>
+
+      <div class="resource-workspace" data-resource-module="fig3">
+        <div class="fig3-explorer">
+          <div class="fig3-main">
+          <section class="fig3-hero">
+            <div class="titlewrap">
+              <div class="leafbadge">↬</div>
+              <div>
+                <p class="eyebrow">Comparative omics resource</p>
+                <h2>Cross-species conservation explorer</h2>
+                <p>Explore orthogroup-level protein conservation across quinoa, Arabidopsis and rice, with matched RNA-protein coupling across eight comparable life-cycle tissues.</p>
+                <span class="resource-provenance fig3-provenance">Orthogroup resource · 8 matched tissues</span>
+              </div>
+            </div>
+            <a class="about" href="#about">ⓘ About this resource</a>
+          </section>
+
+          <section class="fig3-filters panel">
+            <div><label for="og-group">OG class</label><select id="og-group"><option value="">All classes</option></select></div>
+            <div><label for="og-lineage">RNA lineage</label><select id="og-lineage"><option value="">Mean across lineages</option></select></div>
+            <div>
+              <label for="og-min-r">Min. RNA-protein r <output id="og-min-r-value">-1.00</output></label>
+              <input id="og-min-r" class="fig3-range-input" type="range" min="-1" max="1" step="0.05" value="-1">
+            </div>
+            <div>
+              <label for="og-min-conservation">Min. mean conservation <output id="og-min-conservation-value">-1.00</output></label>
+              <input id="og-min-conservation" class="fig3-range-input" type="range" min="-1" max="1" step="0.05" value="-1">
+            </div>
+            <div><label for="og-gene-query">Gene search</label><input id="og-gene-query" type="search" placeholder="Gene ID or OG ID"></div>
+            <div class="actions"><button class="primary" id="fig3-apply" type="button">⌕ Apply filters</button><button class="ghost" id="fig3-reset" type="button">↻ Reset</button></div>
+          </section>
+
+          <section id="fig3-summary-cards" class="metricgrid"></section>
+
+          <section class="grid2">
+            <div class="panel card scatter">
+              <div class="cardhead">
+                <div><h3>Conservation landscape</h3><p class="sub">Orthogroups by mean pairwise conservation and lineage variance.</p></div>
+              </div>
+              <div id="og-scatter"></div>
+              <div id="og-scatter-detail" class="fig3-og-detail"></div>
+            </div>
+            <div>
+              <div id="og-lineage-chart" class="panel card"></div>
+            </div>
+          </section>
+
+          <section class="clusters panel">
+            <div class="sectionbar">
+              <div><h3>Tissue-pattern clusters</h3><p class="sub">Profiles summarize matched tissue abundance across four plant lineages; cluster sizes report the orthogroups assigned to each pattern.</p></div>
+              <div class="controlseg"><button id="fig3-line-view" class="active" type="button">Line profiles</button><button id="fig3-heatmap-view" type="button">Heatmap view</button></div>
+            </div>
+            <div class="tabs" id="clusterTabs">
+              <button class="tab active" type="button" data-cluster-class="Conserved">Conserved clusters</button>
+              <button class="tab orange" type="button" data-cluster-class="Divergent">Divergent clusters</button>
+              <button class="tab teal" type="button" data-cluster-class="Lineage_shifted">Lineage-shifted clusters</button>
+            </div>
+            <div id="og-cluster-gallery" class="clustergrid"></div>
+          </section>
+
+          <section id="og-gene-list" class="tablepanel panel" hidden></section>
+
+          <section class="tablepanel panel">
+            <div class="tabletop">
+              <div><h3>Gene sets and export</h3><p class="sub">Browse filtered orthogroups and download gene lists for downstream analysis.</p></div>
+              <div class="actions"><button class="ghost" id="fig3-toggle-columns" type="button">▦ Ortholog columns</button><button class="ghost" id="fig3-export-table" type="button">⇩ Export visible page</button><button class="download" id="fig3-export-selected" type="button">⇩ Export selected</button></div>
+            </div>
+            <div id="og-table"></div>
+          </section>
+
+          </div>
+          <div id="fig3-main-figure" hidden></div>
+          <div id="og-class-chart" hidden></div>
+          </div>
+      </div>
+
+      <div class="resource-workspace subgenome-explorer" data-resource-module="fig4">
+        <section class="ab-resource-hero">
+          <div class="ab-titlewrap">
+            <div class="ab-hero-icon" aria-hidden="true"><b>A</b><i></i><b>B</b></div>
+            <div>
+              <p class="eyebrow">Subgenome resource</p>
+              <h2>A/B subgenome explorer</h2>
+              <p>Explore tissue-resolved RNA and absolute protein abundance across matched quinoa A- and B-subgenome homoeologs.</p>
+            </div>
+          </div>
+          <details class="ab-methods-popover">
+            <summary>Data definitions</summary>
+            <div id="ab-methods-summary"></div>
+          </details>
+        </section>
+
+        <section class="ab-filter-panel">
+          <label><span>Tissue</span><select id="ab-tissue-filter"></select></label>
+          <label><span>Molecular layer</span><select id="ab-layer-filter"><option value="both">RNA + Protein</option><option value="RNA">RNA</option><option value="APQ">Protein (APQ)</option></select></label>
+          <label><span>Bias class</span><select id="ab-direction-filter"><option value="all">All calls</option><option value="A_higher">A higher</option><option value="B_higher">B higher</option><option value="Balanced">Balanced</option></select></label>
+          <label><span>RNA → protein behavior</span><select id="ab-behavior-filter"><option value="all">All behaviors</option><option value="Amplified">Amplified</option><option value="Buffered">Buffered</option><option value="Similar">Similar</option></select></label>
+          <label><span>Gene or annotation</span><input id="ab-query-filter" type="search" placeholder="Symbol, A/B Gene ID or function"></label>
+          <div class="ab-filter-actions"><button id="ab-apply-filters" class="primary" type="button">Apply filters</button><button id="ab-reset-filters" type="button">Reset</button><button id="ab-export-current" class="download" type="button">Download current set</button></div>
+        </section>
+
+        <section id="ab-summary-cards" class="ab-summary-cards"></section>
+
+        <nav class="ab-view-tabs" aria-label="A/B subgenome resource views">
+          <button class="active" type="button" data-ab-tab="overview">Overview</button>
+          <button type="button" data-ab-tab="tissue">Tissue browser</button>
+          <button type="button" data-ab-tab="pairs">Pair explorer</button>
+          <button type="button" data-ab-tab="patterns">Broad patterns &amp; GO</button>
+        </nav>
+
+        <div class="ab-view-panels">
+          <section class="ab-view-panel active" data-ab-panel="overview">
+            <div class="ab-overview-grid">
+              <article class="ab-panel"><div class="ab-panel-head"><div><p class="eyebrow">Matched output</p><h3>Global A/B abundance balance</h3></div><span class="ab-definition-tag">log2FC(A−B)</span></div><div id="ab-global-balance"></div></article>
+              <article class="ab-panel"><div class="ab-panel-head"><div><p class="eyebrow">Cross-layer regulation</p><h3>RNA → protein behavior</h3></div><span class="ab-definition-tag">s7 rank difference</span></div><div id="ab-behavior-summary"></div></article>
+            </div>
+            <article class="ab-panel ab-quadrant-panel"><div class="ab-panel-head"><div><p class="eyebrow">Tissue direction</p><h3>RNA and protein quadrant landscape</h3><p>Each card reports the tissue in which the corresponding directional combination is the density mode.</p></div></div><div id="ab-quadrant-overview"></div></article>
+          </section>
+
+          <section class="ab-view-panel" data-ab-panel="tissue">
+            <article class="ab-panel">
+              <div class="ab-panel-head"><div><p class="eyebrow">28-tissue navigator</p><h3 id="ab-tissue-title">Shoot tip (ST)</h3></div><span id="ab-tissue-correlation" class="ab-definition-tag"></span></div>
+              <div class="ab-tissue-layout"><div id="ab-tissue-grid" class="ab-tissue-grid"></div><div><div id="ab-tissue-bias-bars"></div><div class="ab-tissue-main"><div class="ab-chart-shell"><div class="ab-chart-title">Pair-level RNA–protein bias landscape</div><div id="ab-tissue-scatter"></div></div><aside id="ab-tissue-detail" class="ab-tissue-detail"></aside></div></div></div>
+            </article>
+          </section>
+
+          <section class="ab-view-panel" data-ab-panel="pairs">
+            <div class="ab-pair-layout">
+              <article class="ab-panel ab-pair-table-panel"><div class="ab-panel-head"><div><p class="eyebrow">Filtered homoeologs</p><h3>Homoeolog pair records</h3></div><span id="ab-pair-result-count" class="ab-definition-tag"></span></div><div id="ab-pair-table"></div><div id="ab-pair-pagination" class="ab-pagination"></div></article>
+              <article class="ab-panel ab-pair-detail-panel"><div id="ab-pair-detail"></div></article>
+            </div>
+          </section>
+
+          <section class="ab-view-panel" data-ab-panel="patterns">
+            <div class="ab-pattern-toolbar"><div><p class="eyebrow">Persistent direction</p><h3>Broad A/B programs across 28 tissues</h3></div><div class="ab-segmented"><button class="active" type="button" data-ab-pattern="all">Both classes</button><button type="button" data-ab-pattern="broad_aa">Broad AA</button><button type="button" data-ab-pattern="broad_bb">Broad BB</button></div></div>
+            <div class="ab-pattern-layout"><article class="ab-panel"><div id="ab-pattern-summary"></div><div id="ab-pattern-heatmap"></div></article><article class="ab-panel"><div class="ab-panel-head"><div><p class="eyebrow">Functional associations</p><h3>Broad-pattern GO enrichment</h3></div></div><div id="ab-go-chart"></div><aside id="ab-go-detail" class="ab-go-detail"></aside></article></div>
+          </section>
+        </div>
+      </div>
+
+      <div class="resource-workspace cfms-explorer" data-resource-module="fig5">
+        <section class="cfms-resource-hero">
+          <div class="cfms-titlewrap">
+            <div class="cfms-hero-icon" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+            <div>
+              <p class="eyebrow">Protein association resource</p>
+              <h2>CF-MS protein association explorer</h2>
+              <p>Search quinoa co-fractionation profiles, precision-filtered protein associations, graph-derived communities and A/B homoeolog replaceability.</p>
+            </div>
+          </div>
+          <details class="cfms-methods-popover">
+            <summary>Data definitions</summary>
+            <div id="cfms-methods-summary"></div>
+          </details>
+        </section>
+
+        <section id="cfms-summary-cards" class="cfms-summary-cards" aria-label="CF-MS resource summary"></section>
+
+        <nav class="cfms-view-tabs" aria-label="CF-MS resource views">
+          <button class="active" type="button" data-cfms-tab="overview">Overview</button>
+          <button type="button" data-cfms-tab="profiles">Elution profiles</button>
+          <button type="button" data-cfms-tab="network">Association network</button>
+          <button type="button" data-cfms-tab="communities">Communities</button>
+          <button type="button" data-cfms-tab="homoeologs">Homoeologs &amp; replaceability</button>
+        </nav>
+
+        <div class="cfms-view-panels">
+          <section class="cfms-view-panel active" data-cfms-panel="overview">
+            <div class="cfms-overview-grid">
+              <article class="cfms-panel cfms-global-panel">
+                <div class="cfms-panel-head"><div><p class="eyebrow">Fraction-level evidence</p><h3>Global CF-MS landscape</h3><p>Mean normalized signal and the number of proteins detected across the 59 IEX fractions.</p></div><span class="cfms-definition-tag">IEX 20–78</span></div>
+                <div id="cfms-global-elution"></div>
+              </article>
+              <article class="cfms-panel">
+                <div class="cfms-panel-head"><div><p class="eyebrow">Network composition</p><h3>A/B association context</h3><p>Precision-filtered associations partitioned into within- and cross-subgenome evidence.</p></div><span class="cfms-definition-tag">estimated precision ≈ 0.90</span></div>
+                <div id="cfms-network-composition"></div>
+              </article>
+            </div>
+            <div class="cfms-overview-grid lower">
+              <article class="cfms-panel"><div class="cfms-panel-head"><div><p class="eyebrow">Callable quartets</p><h3>Association replaceability</h3><p>Counts refer to homoeolog families, not individual network edges.</p></div></div><div id="cfms-replaceability-overview"></div></article>
+              <article class="cfms-panel"><div class="cfms-panel-head"><div><p class="eyebrow">Resource guide</p><h3>Move from landscape to records</h3></div></div><div id="cfms-resource-guide"></div></article>
+            </div>
+          </section>
+
+          <section class="cfms-view-panel" data-cfms-panel="profiles">
+            <section class="cfms-filter-panel">
+              <label><span>Gene or annotation</span><input id="cfms-profile-query" type="search" placeholder="Symbol, Cqu gene ID or function"></label>
+              <label><span>Subgenome</span><select id="cfms-profile-subgenome"><option value="all">A + B</option><option value="A">A subgenome</option><option value="B">B subgenome</option></select></label>
+              <div class="cfms-filter-actions"><button id="cfms-profile-apply" class="primary" type="button">Apply filters</button><button id="cfms-profile-reset" type="button">Reset</button><button id="cfms-profile-export" class="download" type="button">Download page</button></div>
+            </section>
+            <div class="cfms-profile-layout">
+              <article class="cfms-panel"><div class="cfms-panel-head"><div><p class="eyebrow">Profile matrix</p><h3>Protein elution heatmap</h3><p>Up to 60 filtered proteins, normalized independently to preserve profile shape.</p></div></div><div id="cfms-profile-heatmap"></div></article>
+              <aside id="cfms-profile-detail" class="cfms-panel cfms-detail-panel"></aside>
+            </div>
+            <article class="cfms-panel cfms-table-panel"><div class="cfms-panel-head"><div><p class="eyebrow">Callable profiles</p><h3>Protein records</h3></div><span id="cfms-profile-result-count" class="cfms-definition-tag"></span></div><div id="cfms-profile-table"></div><div id="cfms-profile-pagination" class="cfms-pagination"></div></article>
+          </section>
+
+          <section class="cfms-view-panel" data-cfms-panel="network">
+            <section class="cfms-filter-panel network-filter">
+              <label><span>Association context</span><select id="cfms-network-context"><option value="all">All associations</option><option value="AA">A–A</option><option value="AB">A–B</option><option value="BB">B–B</option><option value="same">Same subgenome</option><option value="cross">Cross subgenome</option></select></label>
+              <label><span>Seed protein</span><input id="cfms-network-query" type="search" placeholder="Symbol, gene ID or function"></label>
+              <div class="cfms-filter-actions"><button id="cfms-network-apply" class="primary" type="button">Apply filters</button><button id="cfms-network-reset" type="button">Reset view</button><button id="cfms-network-export" class="download" type="button">Download page</button></div>
+            </section>
+            <div class="cfms-network-layout">
+              <article class="cfms-panel cfms-network-panel"><div class="cfms-panel-head"><div><p class="eyebrow">Interactive evidence graph</p><h3>Protein association neighborhood</h3><p>Search opens a protein-centred neighborhood; the default view shows high-degree proteins.</p></div><span id="cfms-network-visual-count" class="cfms-definition-tag"></span></div><div id="cfms-network-stage"></div><div id="cfms-network-legend" class="cfms-network-legend"></div></article>
+              <aside id="cfms-network-detail" class="cfms-panel cfms-detail-panel"></aside>
+            </div>
+            <article class="cfms-panel cfms-table-panel"><div class="cfms-panel-head"><div><p class="eyebrow">Filtered edge set</p><h3>Association records</h3></div><span id="cfms-network-result-count" class="cfms-definition-tag"></span></div><div id="cfms-network-table"></div><div id="cfms-network-pagination" class="cfms-pagination"></div></article>
+          </section>
+
+          <section class="cfms-view-panel" data-cfms-panel="communities">
+            <section class="cfms-filter-panel communities-filter">
+              <label><span>Community or protein</span><input id="cfms-community-query" type="search" placeholder="Community ID, symbol or gene ID"></label>
+              <div class="cfms-filter-actions"><button id="cfms-community-apply" class="primary" type="button">Search</button><button id="cfms-community-reset" type="button">Reset</button></div>
+            </section>
+            <div class="cfms-community-layout">
+              <article class="cfms-panel"><div class="cfms-panel-head"><div><p class="eyebrow">Graph-derived modules</p><h3>Association communities</h3><p>Communities summarize densely connected network neighborhoods and are not asserted as fully validated physical complexes.</p></div><span id="cfms-community-result-count" class="cfms-definition-tag"></span></div><div id="cfms-community-grid"></div><div id="cfms-community-pagination" class="cfms-pagination"></div></article>
+              <aside id="cfms-community-detail" class="cfms-panel cfms-detail-panel"></aside>
+            </div>
+          </section>
+
+          <section class="cfms-view-panel" data-cfms-panel="homoeologs">
+            <div class="cfms-subtabs" role="tablist" aria-label="Homoeolog resource views"><button class="active" type="button" data-cfms-homoeolog-view="similarity">A/B profile similarity</button><button type="button" data-cfms-homoeolog-view="quartets">Quartet replaceability</button></div>
+            <div class="cfms-homoeolog-panel active" data-cfms-homoeolog-panel="similarity">
+              <section class="cfms-filter-panel">
+                <label><span>Gene or annotation</span><input id="cfms-homoeolog-query" type="search" placeholder="A/B gene, symbol or function"></label>
+                <label><span>Similarity class</span><select id="cfms-similarity-class"><option value="all">All classes</option><option value="High">High</option><option value="Moderate">Moderate</option><option value="Low">Low</option><option value="Divergent">Divergent</option></select></label>
+                <div class="cfms-filter-actions"><button id="cfms-homoeolog-apply" class="primary" type="button">Apply filters</button><button id="cfms-homoeolog-reset" type="button">Reset</button><button id="cfms-homoeolog-export" class="download" type="button">Download page</button></div>
+              </section>
+              <div class="cfms-homoeolog-layout"><article class="cfms-panel"><div class="cfms-panel-head"><div><p class="eyebrow">Continuous profile behavior</p><h3>A/B elution similarity</h3></div><span class="cfms-definition-tag">Pearson r</span></div><div id="cfms-similarity-histogram"></div><div id="cfms-homoeolog-table"></div><div id="cfms-homoeolog-pagination" class="cfms-pagination"></div></article><aside id="cfms-homoeolog-detail" class="cfms-panel cfms-detail-panel"></aside></div>
+            </div>
+            <div class="cfms-homoeolog-panel" data-cfms-homoeolog-panel="quartets">
+              <section class="cfms-filter-panel">
+                <label><span>Family or protein</span><input id="cfms-quartet-query" type="search" placeholder="Family ID, symbol or Cqu gene ID"></label>
+                <label><span>Replaceability</span><select id="cfms-quartet-class"><option value="all">All classes</option><option value="Nonreplaceable">Nonreplaceable</option><option value="Low replaceable">Low replaceable</option><option value="High replaceable">High replaceable</option><option value="Fully replaceable">Fully replaceable</option></select></label>
+                <div class="cfms-filter-actions"><button id="cfms-quartet-apply" class="primary" type="button">Apply filters</button><button id="cfms-quartet-reset" type="button">Reset</button><button id="cfms-quartet-export" class="download" type="button">Download page</button></div>
+              </section>
+              <div class="cfms-quartet-layout"><article class="cfms-panel"><div class="cfms-panel-head"><div><p class="eyebrow">Callable association alternatives</p><h3>Homoeolog quartet records</h3></div><span id="cfms-quartet-result-count" class="cfms-definition-tag"></span></div><div id="cfms-quartet-class-chart"></div><div id="cfms-quartet-table"></div><div id="cfms-quartet-pagination" class="cfms-pagination"></div></article><aside id="cfms-quartet-detail" class="cfms-panel cfms-detail-panel"></aside></div>
+            </div>
+          </section>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section id="tools" class="section-block tools-section route-page">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Tools</p>
+          <h2>Query, enrich and compare gene sets</h2>
+          <p class="section-caption">Lightweight tools for moving from gene IDs to sequences, tissue patterns and functional terms.</p>
+        </div>
+        <span id="tool-status-chip" class="release-chip">Checking tools</span>
+      </div>
+
+      <div id="tool-status" class="tool-status"></div>
+
+      <div class="tools-grid">
+        <article class="tool-card">
+          <div class="tool-card-head">
+            <div>
+              <p class="eyebrow">Batch lookup</p>
+              <h3>Gene list summary</h3>
+            </div>
+            <div class="tool-card-actions"><button class="tool-example" data-tool-example="batch" type="button">Example</button><button id="batch-run" type="button">Run</button></div>
+          </div>
+          <textarea id="batch-input" aria-label="Gene IDs for batch lookup" spellcheck="false" placeholder="Cqu1AG202550&#10;Cqu1BG000010"></textarea>
+          <div id="batch-results" class="tool-results"></div>
+        </article>
+
+        <article class="tool-card">
+          <div class="tool-card-head">
+            <div>
+              <p class="eyebrow">Expression heatmap</p>
+              <h3>Gene set across 28 tissues</h3>
+            </div>
+            <div class="tool-card-actions"><button class="tool-example" data-tool-example="heatmap" type="button">Example</button><select id="heatmap-layer" aria-label="Expression layer">
+              <option value="both">Transcriptome + proteome</option>
+              <option value="transcriptome">Transcriptome only</option>
+              <option value="proteome">Proteome only</option>
+            </select></div>
+          </div>
+          <textarea id="heatmap-input" aria-label="Gene IDs for expression heatmap" spellcheck="false" placeholder="Paste up to 60 Gene IDs"></textarea>
+          <button id="heatmap-run" type="button">Draw heatmap</button>
+          <div id="heatmap-results" class="tool-results"></div>
+        </article>
+
+        <article class="tool-card">
+          <div class="tool-card-head">
+            <div>
+              <p class="eyebrow">GO enrichment</p>
+              <h3>Functional over-representation</h3>
+            </div>
+            <div class="tool-card-actions">
+              <button class="tool-example" data-tool-example="go" type="button">Example</button>
+              <select id="go-display-scope" aria-label="GO result display scope">
+                <option value="plant">Plant-focused</option>
+                <option value="all">All GO terms</option>
+              </select>
+              <button id="go-run" type="button">Run GO</button>
+            </div>
+          </div>
+          <textarea id="go-input" aria-label="Gene IDs for GO enrichment" spellcheck="false" placeholder="Paste Gene IDs; background is all genes in the Cq_V4 atlas"></textarea>
+          <div id="go-results" class="tool-results"></div>
+        </article>
+
+        <article class="tool-card">
+          <div class="tool-card-head">
+            <div>
+              <p class="eyebrow">Sequence fetch</p>
+              <h3>Longest transcript/protein sequence</h3>
+            </div>
+            <div class="tool-card-actions"><button class="tool-example" data-tool-example="sequence" type="button">Example</button><button id="sequence-run" type="button">Fetch</button></div>
+          </div>
+          <div class="inline-form">
+            <input id="sequence-gene" aria-label="Gene ID for sequence retrieval" type="text" placeholder="Cqu1AG202550">
+            <select id="sequence-type" aria-label="Sequence type">
+              <option value="protein">Protein</option>
+              <option value="mrna">mRNA</option>
+              <option value="cds">CDS</option>
+            </select>
+          </div>
+          <pre id="sequence-results" class="sequence-box"></pre>
+        </article>
+
+        <article class="tool-card tool-wide">
+          <div class="tool-card-head">
+            <div>
+              <p class="eyebrow">BLAST</p>
+              <h3>Local sequence similarity search</h3>
+            </div>
+            <div class="inline-form compact">
+              <button class="tool-example" data-tool-example="blast" type="button">Example</button>
+              <select id="blast-program" aria-label="BLAST program">
+                <option value="blastn">blastn</option>
+                <option value="blastp">blastp</option>
+                <option value="blastx">blastx</option>
+                <option value="tblastn">tblastn</option>
+              </select>
+              <select id="blast-db" aria-label="BLAST database">
+                <option value="mrna">Longest mRNA</option>
+                <option value="cds">Longest CDS</option>
+                <option value="protein">Longest protein</option>
+                <option value="genome" disabled>Genome sequence (unavailable)</option>
+              </select>
+            </div>
+          </div>
+          <textarea id="blast-query" class="blast-query" aria-label="BLAST query sequence" spellcheck="false" placeholder=">query&#10;ATGG..."></textarea>
+          <button id="blast-run" type="button">Run BLAST</button>
+          <div id="blast-results" class="tool-results"></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="downloads" class="section-block route-page">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Data access</p>
+          <h2>Metadata downloads and record access</h2>
+          <p class="section-caption">Direct downloads are limited to release metadata. Complete study datasets will be linked through verified repositories.</p>
+        </div>
+        <span class="release-chip" data-release-label data-release-date>Release candidate 1.0 · 11 June 2026</span>
+      </div>
+      <div id="download-grid" class="download-grid"></div>
+
+      <div class="data-governance-note">
+        <div>
+          <p class="eyebrow">Access policy</p>
+          <h3>Query first, repository managed</h3>
+          <p>QLOA supports gene- and tissue-level exploration in the browser. Raw abundance matrices and complete derived tables are not distributed directly by the application.</p>
+        </div>
+        <div class="governance-actions">
+          <span id="release-manuscript-summary">Associated manuscript: in preparation; final citation and DOI not yet assigned</span>
+          <span id="release-reuse-summary">Reuse status: data and software licences have not yet been assigned</span>
+        </div>
+      </div>
+
+      <div class="api-card">
+        <div>
+          <p class="eyebrow">Lightweight lookup</p>
+          <h3>Public record endpoints</h3>
+          <p>These read-only endpoints support individual record lookup. Interactive-resource routes are implementation interfaces, not a bulk-download service.</p>
+        </div>
+        <pre>/api/search?q=Cqu1AG202550
+/api/genes/Cqu1AG202550
+/api/tissues/OV</pre>
+        <p class="api-access-note">Automated bulk harvesting and high-volume endpoint enumeration are not supported.</p>
+      </div>
+    </section>
+
+    <section id="about" class="documentation-section route-page">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Help</p>
+          <h2>Resource information and support</h2>
+          <p class="section-caption">Scope, interpretation, access, citation and support for using the atlas.</p>
+        </div>
+        <span class="release-chip" data-release-label data-release-suffix=" · Cq_V4">Release candidate 1.0 · Cq_V4</span>
+      </div>
+
+      <div class="documentation-notice">
+        <strong>Evidence guide</strong>
+        <p>QLOA distinguishes measured abundance, derived statistics and homology-based annotation. Predicted functions and network associations are evidence for exploration, not direct functional validation in quinoa.</p>
+      </div>
+
+      <div class="documentation-quickstart">
+        <div><p class="eyebrow">Quick start</p><h3>Explore the atlas</h3></div>
+        <ol>
+          <li><strong>Find a record.</strong> Search a Cq_V4 gene ID, Arabidopsis symbol or functional term in Gene Search.</li>
+          <li><strong>Inspect abundance.</strong> Open the gene report to compare transcript and protein profiles across 28 tissues.</li>
+          <li><strong>Place it in context.</strong> Use Data Resources for tissue-specific proteins, orthogroups, A/B homoeologs and CF-MS associations.</li>
+          <li><strong>Analyse a gene set.</strong> Use the Tools page for heatmaps, GO enrichment, sequence retrieval and BLAST.</li>
+        </ol>
+        <div class="quickstart-actions"><a class="text-link" href="#browse">Try gene search <span aria-hidden="true">→</span></a><a class="text-link" href="#tools">Load tool examples <span aria-hidden="true">→</span></a><a class="text-link" href="#downloads">Open data access <span aria-hidden="true">→</span></a></div>
+      </div>
+
+      <div class="documentation-grid">
+        <article class="documentation-card">
+          <p class="eyebrow">Resource scope</p><h3>Quinoa life-cycle atlas</h3>
+          <dl class="method-list">
+            <div><dt>Species</dt><dd><i>Chenopodium quinoa</i> Willd.</dd></div>
+            <div><dt>Genome assembly</dt><dd>Cq_V4</dd></div>
+            <div><dt>Data layers</dt><dd>Transcriptome and proteome</dd></div>
+            <div><dt>Coverage</dt><dd>28 tissues across 6 developmental stages</dd></div>
+            <div><dt>Primary identifier</dt><dd>Cq_V4 longest-isoform gene ID</dd></div>
+            <div><dt id="release-state-label">Release candidate</dt><dd id="release-version-date">1.0 · 11 June 2026</dd></div>
+          </dl>
+        </article>
+
+        <article class="documentation-card" id="release-notes">
+          <p class="eyebrow">Resource collections</p><h3>What can be explored</h3>
+          <p>QLOA connects gene reports and tissue profiles with tissue-specific protein programs, cross-species conservation, A/B homoeolog patterns and CF-MS protein associations.</p>
+          <p>Each collection is presented as a searchable or interactive resource rather than as a reproduction of a manuscript figure.</p>
+          <a class="text-link" href="https://github.com/LaForever/qunioa_web/blob/main/CHANGELOG.md" target="_blank" rel="noopener">Open complete changelog <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="documentation-card">
+          <p class="eyebrow">Interpretation</p><h3>Evidence types</h3>
+          <p><strong>Measured:</strong> transcript and protein abundance represented in the atlas. <strong>Derived:</strong> specificity, conservation, subgenome and network summaries calculated from study data.</p>
+          <p><strong>Transferred annotation:</strong> descriptions inferred from homologous plant genes. Derived and transferred evidence should not be treated as direct functional validation in quinoa.</p>
+        </article>
+
+        <article class="documentation-card">
+          <p class="eyebrow">Data access</p><h3>Public and repository-managed data</h3>
+          <p>Direct downloads are limited to the tissue dictionary and assay sample metadata. Complete matrices, full derived tables and network edge lists are not distributed by the application.</p>
+          <p>Verified transcriptome, proteome and release-archive records will be linked here after repository publication.</p>
+          <a class="text-link" href="#downloads">Open metadata downloads <span aria-hidden="true">→</span></a>
+            <a class="text-link" href="./data-access.html">Read access policy <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="documentation-card">
+          <p class="eyebrow">Publication and citation</p><h3>Release status</h3>
+          <dl class="method-list" id="release-readiness-list">
+            <div><dt>Publication state</dt><dd>Pre-release metadata incomplete</dd></div>
+            <div><dt>Manuscript</dt><dd>In preparation; citation and DOI pending</dd></div>
+            <div><dt>Transcriptome repository</dt><dd>Verified accession pending</dd></div>
+            <div><dt>Proteome repository</dt><dd>Verified accession pending</dd></div>
+            <div><dt>Data licence</dt><dd>Not yet assigned</dd></div>
+            <div><dt>Software licence</dt><dd>Not yet assigned</dd></div>
+          </dl>
+          <p id="release-citation-copy"><cite>A mass spectrometry-based atlas of the quinoa proteome reveals subgenome divergence at the protein level. Manuscript in preparation; do not cite it as a published article.</cite> For pre-release use, cite the atlas name, release 1.0, source repository and access date.</p>
+          <p id="release-access-copy"><strong>Repository records:</strong> transcriptome — no verified public accession; proteome — no verified public accession.</p>
+          <p id="release-license-copy">Data and software licences are not yet assigned. Public visibility or download availability must not be interpreted as permission for unrestricted reuse.</p>
+        </article>
+
+        <article class="documentation-card">
+          <p class="eyebrow">Access and support</p><h3>Query service and contact</h3>
+          <p>The atlas can be searched without an account. Gene lists and sequences submitted to the analysis tools are processed for the current request and are not written to the atlas database.</p>
+          <p id="release-privacy-copy">The standalone application does not retain submitted gene lists or sequences. Infrastructure-level logging and retention terms remain the responsibility of the production host and must be published before release.</p>
+          <p><strong>Resource contact:</strong> Heng Huang, School of Life Sciences and Biotechnology, Shanghai Jiao Tong University · <a href="mailto:huangheng2000@sjtu.edu.cn">huangheng2000@sjtu.edu.cn</a></p>
+          <a class="text-link" href="https://github.com/LaForever/qunioa_web" target="_blank" rel="noopener">Source repository <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="documentation-card">
+          <p class="eyebrow">Responsible use</p><h3>Privacy, limitations and accessibility</h3>
+          <p>QLOA is a research resource. Database records, predicted functions and association evidence require independent validation and must not be used as the sole basis for clinical, food-safety or agronomic decisions.</p>
+          <p>The application stores one local browser preference and does not set analytics cookies. Submitted identifiers and sequences are processed for the current request; production infrastructure logging is governed separately by the host policy.</p>
+          <div class="documentation-policy-links">
+              <a class="text-link" href="./privacy.html">Privacy statement <span aria-hidden="true">→</span></a>
+              <a class="text-link" href="./disclaimer.html">Scientific disclaimer <span aria-hidden="true">→</span></a>
+              <a class="text-link" href="./accessibility.html">Accessibility <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="documentation-card">
+          <p class="eyebrow">FAQ and support</p><h3>Common questions</h3>
+          <p><strong>Which identifier should I use?</strong> Submit a Cq_V4 longest-isoform gene ID. Version suffixes such as <code>.1</code> are normalized by sequence and batch tools.</p>
+          <p><strong>Why can RNA and protein calls differ?</strong> Detection thresholds, missingness and measurement technologies differ between layers; absence from one layer is not evidence of biological absence.</p>
+          <p><strong>Where are the complete datasets?</strong> Bulk study files will be linked through verified repositories after accession release.</p>
+          <p><strong>How do I report a problem?</strong> Include the release, URL, gene or tissue identifier and steps needed to reproduce it in an email to the resource contact.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <strong>Quinoa Life-cycle Omics Atlas</strong>
+      <span>A life-cycle transcriptome and proteome resource for <i>Chenopodium quinoa</i>.</span>
+    </div>
+    <nav aria-label="Footer navigation">
+      <a href="#about">About &amp; citation</a>
+      <a href="#downloads">Downloads</a>
+      <a href="https://github.com/LaForever/qunioa_web/blob/main/CHANGELOG.md" target="_blank" rel="noopener">Release notes</a>
+      <a href="./privacy.html">Privacy</a>
+      <a href="./disclaimer.html">Disclaimer</a>
+      <a href="./accessibility.html">Accessibility</a>
+      <a href="mailto:huangheng2000@sjtu.edu.cn">Contact</a>
+      <a href="https://github.com/LaForever/qunioa_web" target="_blank" rel="noopener">Source code</a>
+    </nav>
+    <span data-release-label data-release-suffix=" · Transcriptome and proteome across 28 tissues · Cq_V4">Release candidate 1.0 · Transcriptome and proteome across 28 tissues · Cq_V4</span>
+  </footer>
+
+  <script type="module" src="./app.js?v=go-network-preset-2"></script>
+</body>
+</html>
